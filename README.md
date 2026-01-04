@@ -47,7 +47,8 @@ Then create a new A (Host) record: </p>
 <br />
 
 <p>
-<img width="600" alt="image" src="https://github.com/user-attachments/assets/8e1c808d-99fb-4275-a212-77198e9e93ae" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/8e1c808d-99fb-4275-a212-77198e9e93ae" /> 
+
 </p>
 <p>
 I then switched to Client-1 and pinged mainframe. Notice how it maches to 10.0.0.4 and a ping is returned. </p>
