@@ -92,15 +92,28 @@ I then checked the local DNS cache and observed. </p> We can still see the mainf
 
 </p>
 <p>
-flush dns What happened was that the computer checked the local cache and nothing was in there because we flushed the dns, then it checked the local host file and there was no mainframe entry in there. Finally, it reached out to the DNS server over the network and now it's able to get the new ip address when doing ping mainframe.
+I flushed DNS cache by typing `ipconfig / flushdns.` This will then remove the old IP address which was 10.0.0.4. Then, if I type `ping mainframe` again, it comes out with the new IP address because we flushed the DNS cache then it check the DNS server.
 </p>
 <br />
 
 <p>
-<img width="994" height="820" alt="image" src="https://github.com/user-attachments/assets/19b6a9e2-53ef-49b5-b39f-4af14ecceb1a" /> <img width="782" height="726" alt="image" src="https://github.com/user-attachments/assets/66114323-d27b-4138-8363-70e46b612a75" />
+<img width="994" height="820" alt="image" src="https://github.com/user-attachments/assets/19b6a9e2-53ef-49b5-b39f-4af14ecceb1a" />
 </p>
 <p>
-search to google
+I go back onto DC1 and in DNS Manager, created a new CNAME record to map search to google.com: </p>
+   - Name: search </p>
+   - Alias to: www.google.com </p>
+A CNAME record basically maps a name that points to another existing domain name instead of directly to an IP address.
 </p>
 <br />
 
+<p>
+<img width="782" height="726" alt="image" src="https://github.com/user-attachments/assets/66114323-d27b-4138-8363-70e46b612a75" />
+</p>
+<p>
+If I type in `nslookup search` DC-1 will then resolve it to google.com
+</p>
+<br />
+
+<h2>Lab Project Summary</h2>
+Through this DNS lab, I learned how domain names are resolved to IP addresses in a Windows Server Active Directory environment. I practiced creating and testing DNS A records and CNAME records, and used tools like ping and nslookup to troubleshoot name resolution issues. I also learned how local DNS caching works on client machines, including how outdated records can persist until the DNS cache is flushed. Overall, this project helped me understand how DNS functions behind the scenes and how to diagnose and fix common DNS-related connectivity problems.
