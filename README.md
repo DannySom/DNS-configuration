@@ -12,6 +12,7 @@ In this repository, I configured DNS in a Windows Server environment by creating
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Various Command-Line Tools
+- Active Directory: DC-1 and Client-1
 
 <h2>Operating Systems Used </h2>
 
